@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>     
+<body>
+    <h1>Calculate your Final Marks Theory Subject</h1>
+    <form action="/practical-submit" method="POST">
+        <input type="number" step="0.01" name="AverageM" placeholder="Average Worksheet Marks" />
+        <input type="number" step="0.01" name="Practicals" placeholder="Practical Mst" />      
+        <input type="number" step="0.01" name="FinalEST" placeholder="Final Est Marks" />
+        <input type="submit" step="0.01" value="Submit" />
+    </form>
+    <% if(locals.practicalSum) { %>
+    <h1>You have Secured <%= practicalSum %> marks</h1>
+    <% } else { %>
+    <h2>Fill the above details</h2>
+    <% } %> 
+</body>
+</html>

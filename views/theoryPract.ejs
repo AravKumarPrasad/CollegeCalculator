@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theory & Practical</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Calculate your Final Marks Hybrid Subjects</h1>
+    <form action="/TheoryPractSubmit" method="POST">
+      <input
+        type="number"
+        step="0.01"
+        name="Assignment"
+        placeholder="Assignment"
+      />
+      <input type="number" step="0.01" name="Surprise" placeholder="Surprise" />
+      <input
+        type="number"
+        step="0.01"
+        name="Attendence"
+        placeholder="Attendence"
+      />
+      <input
+        type="number"
+        step="0.01"
+        name="Avg"
+        placeholder="AverageOfAllPractical"
+      />
+      <input type="number" step="0.01" name="Quiz" placeholder="Quiz" />
+      <input
+        type="number"
+        step="0.01"
+        name="PracticalMst"
+        placeholder="Practical Mst"
+      />
+      <input type="number" step="0.01" name="Mst1" placeholder="Mst1" />
+      <input type="number" step="0.01" name="Mst2" placeholder="Mst2" />
+      <input
+        type="number"
+        step="0.01"
+        name="FinalPractical"
+        placeholder="FinalPractical"
+      />
+      <input type="number" step="0.01" name="Finals" placeholder="Finals" />
+      <input type="submit" step="0.01" value="Submit" />
+    </form>
+    <% if(locals.SumAns) { %>
+    <h1>You have Secured <%= SumAns %> marks</h1>
+    <% } else { %>
+    <h2>Fill the above details</h2>
+    <% } %>
+  </body>
+</html>
